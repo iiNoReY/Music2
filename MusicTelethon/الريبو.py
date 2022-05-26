@@ -30,7 +30,7 @@ async def restart(client, m: Message):
     await loli.edit("7")
     await loli.edit("8")
     await loli.edit("9")
-    await loli.edit("**✅ تم اعاده تشغيل موسيقى تليثون**")
+    await loli.edit("**✅ تم اعاده تشغيل سورس دارك**")
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit()
 @Client.on_message(filters.command(["اوامر الاغاني"], prefixes=f"{HNDLR}"))
@@ -39,7 +39,7 @@ async def help(client, m: Message):
     HELP = f"""
 <b>👋 اهلا {m.from_user.mention}!
 
-𝘰𝘳𝘥𝘦𝘳𝘴 𝘮𝘶𝘴𝘪𝘤 𝘵𝘦𝘭𝘦𝘵𝘩𝘰𝘯
+اوامر سورس دارك
 ——————×—————
 
 ⧉ | لتشغيل صوتية في المكالمة أرسل ⇦ [ `{HNDLR}تشغيل  + اسم الاغنية` ]
@@ -57,8 +57,8 @@ async def help(client, m: Message):
 
 ⧉ | لأعاده تشغيل التنصيب أرسل ⇦  [ `{HNDLR}ريستارت` ]
 ———————×———————
-🛠 | @TelethonMusic
-⭐ | @LLL5L"""
+🛠 | @QQQBE
+⭐ | @SSSC2"""
     await m.reply(HELP)
 @Client.on_message(filters.command(["الريبو"], prefixes=f"{HNDLR}"))
 async def repo(client, m: Message):
@@ -66,7 +66,7 @@ async def repo(client, m: Message):
     REPO = f"""
 <b>👋  اهلا {m.from_user.mention}!
 
-🎶 هذا ميوزك العرب | @TelethonMusic
-⭐ المطور | @LLL5L
+🎶 هذا ميوزك دارك | @QQQBE
+⭐ المطور | @SSSC2
 """
     await m.reply(REPO, disable_web_page_preview=True)

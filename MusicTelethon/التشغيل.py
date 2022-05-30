@@ -100,8 +100,6 @@ async def play(client, m: Message):
                 await call_py.join_group_call(                    chat_id,                    AudioPiped(                        dl,                    ),                    stream_type=StreamType().pulse_stream,                )
                 add_to_queue(chat_id, songname, dl, link, "Audio", 0)
                 await huehue.delete()
-                await m.reply_photo(
-                    photo="https://telegra.ph/file/40c0ab31719a780e37b5c.jpg",
                     caption=f"""
 **🏷️ العنوان : [{songname}]({link})
 💬 ايدي المحادثه : {chat_id}
@@ -130,9 +128,6 @@ async def play(client, m: Message):
                     if chat_id in QUEUE:
                         pos = add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
                         await huehue.delete()
-                        await m.reply_photo(
-                            photo=f"{thumbnail}",
-                            caption=f"""
 **🏷️  العنوان : [{songname}]({url})
 ⏱️ مده المقطع : {duration}
 💬 ايدي المحادثه : {chat_id}
@@ -194,9 +189,6 @@ async def vplay(client, m: Message):
                 pos = add_to_queue(chat_id, songname, dl, link, "Video", Q)
                 await huehue.delete()
                 # await m.reply_to_message.delete()
-                await m.reply_photo(
-                    photo="https://telegra.ph/file/40c0ab31719a780e37b5c.jpg",
-                    caption=f"""
 **🏷️ العنوان : [{songname}]({link})
 💬 ايدي المحادثه : {chat_id}
 🎧 طلب من : {m.from_user.mention}**
@@ -217,9 +209,6 @@ async def vplay(client, m: Message):
                 add_to_queue(chat_id, songname, dl, link, "Video", Q)
                 await huehue.delete()
                 # await m.reply_to_message.delete()
-                await m.reply_photo(
-                    photo="https://telegra.ph/file/40c0ab31719a780e37b5c.jpg",
-                    caption=f"""
 **🏷️ العنوان : [{songname}]({link})
 💬 ايدي المحادثه : {chat_id}
 🎧 طلب من : {m.from_user.mention}**
@@ -249,9 +238,6 @@ async def vplay(client, m: Message):
                     if chat_id in QUEUE:
                         pos = add_to_queue(chat_id, songname, ytlink, url, "Video", Q)
                         await huehue.delete()
-                        await m.reply_photo(
-                            photo=f"{thumbnail}",
-                            caption=f"""
 **🏷️  العنوان : [{songname}]({url})
 ⏱️ مده المقطع : {duration}
 💬 ايدي المحادثه : {chat_id}
@@ -303,9 +289,6 @@ async def playfrom(client, m: Message):
                 else:
                     await call_py.join_group_call(                        chat_id,                        AudioPiped(location),                        stream_type=StreamType().pulse_stream,                    )
                     add_to_queue(chat_id, songname, location, link, "Audio", 0)
-                    await m.reply_photo(
-                        photo="https://telegra.ph/file/40c0ab31719a780e37b5c.jpg",
-                        caption=f"""
 **▶ ابدأ تشغيل الأغاني من {chat}
 🏷️ العنوان : [{songname}]({link})
 💬 المحادثه : {chat_id}
